@@ -5,6 +5,7 @@
 	--color-background: #2f303a;
 	--color-white: #ffffff;
 	--color-black: #000000;
+	--color-border: #eeeeee;
 	--butn-backgrnd-color: #188ce8;
 	--our-team-backgrnd: #f5f4fa;
 }
@@ -219,7 +220,6 @@ section {
 
 .features-list-item {
 	flex-basis: calc((100% - 90px) / 4);
-	width: calc((100% - 60px) / 3);
 }
 
 .features-title {
@@ -291,7 +291,7 @@ section {
 	line-height: 1.1875;
 	text-align: center;
 	color: var(--color-text-black);
-	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .team-section-item {
@@ -321,12 +321,15 @@ section {
 	color: var(--color-white);
 }
 
-.footer-contact {
-	list-style: none;
-	padding-top: 20px;
+.footer address {
+	margin-top: 20px;
 }
 
-.footer-contact-item {
+.footer-contact {
+	list-style: none;
+}
+
+.footer-contact-item:not(:last-child) {
 	margin-bottom: 9px;
 }
 
@@ -360,14 +363,6 @@ section {
 	color: var(--color-link-blue);
 }
 
-/* .footer-logo-studio {
-	font-family: "Raleway";
-	font-weight: 700;
-	font-style: normal;
-	font-size: 26px;
-	line-height: 1.1923;
-	color: var(--color-white);
-} */
 /*------------Portfolio------------------*/
 
 /*.portfolio-section {
@@ -425,14 +420,20 @@ section {
 	flex-wrap: wrap;
 	gap: 30px;
 }
+
+.portfolio-examples-list {
+	flex-basis: calc((100% - 60px) / 3);
+}
+
 .portfolio-links {
 	text-decoration: none;
 }
 
 .portfolio-card {
 	background-color: var(--color-white);
-	border: 1px solid #eeeeee;
-	padding: 20px;
+	padding: 20px 24px;
+	border: 1px solid var(--color-border);
+	border-top: 0;
 }
 
 .portfolio-card-title {
